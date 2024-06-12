@@ -30,9 +30,9 @@ $danger:        $red;
 $light:         $gray-100;
 $dark:          $gray-900;
 
-$logo-primary: #202a56;
-$logo-secondary: #ecc94c;
-$logo-teri: $black;
+$logo-primary: #183520;
+$logo-secondary: #f0a64e;
+$logo-teri: #131211;
 
 @mixin gradient-x($start-color: $gray-700, $end-color: $gray-800, $start-percent: 0%, $end-percent: 100%) {
   background-image: linear-gradient(to right, $start-color $start-percent, $end-color $end-percent);
@@ -50,7 +50,7 @@ $logo-teri: $black;
   background-image: linear-gradient(to right, $start-color, $mid-color $color-stop, $end-color);
 }
 
-@mixin gradient-y-three-colors($start-color: $black, $mid-color: $black, $color-stop: 50%, $end-color: $logo-primary) {
+@mixin gradient-y-three-colors($start-color: $logo-teri, $mid-color: $logo-primary, $color-stop: 50%, $end-color: $logo-secondary) {
   background-image: linear-gradient($start-color, $mid-color $color-stop, $end-color);
 }
 
@@ -65,10 +65,6 @@ $logo-teri: $black;
 
 #link {
   text-decoration: none;
-}
-
-#logo_bg {
-  background-color: #000;
 }
 
 #logo {
