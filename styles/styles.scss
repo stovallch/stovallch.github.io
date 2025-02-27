@@ -101,12 +101,8 @@ $logo-teri: #131211;
   background-color: rgba($dark, 0.5);
 }
 
-@mixin mobileCaptions() {
-  background-color: rgba($dark, 0.0);
-}
-
 @media only screen and (max-width: 729px) {
   .carousel-caption {
-    @include mobileCaptions()
+    background-color: rgba($dark, 0.0);
   }
 }
