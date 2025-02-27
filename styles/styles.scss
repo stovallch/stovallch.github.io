@@ -80,12 +80,33 @@ $logo-teri: #131211;
   font-size: large;
 }
 
-#equiptment {
-  width: 35%;
-  height: 35%;
+#services-carousel {
+  width: 80%;
+  height: 80%;
+  text-align: center;
+}
+
+#equipment-carousel {
+  width: 80%;
+  height: 80%;
+  text-align: center;
 }
 
 #socialicons {
-  width: 4%;
-  height: 4%;
+  width: 8%;
+  height: 8%;
+}
+
+.carousel-caption {
+  background-color: rgba($dark, 0.5);
+}
+
+@mixin mobileCaptions() {
+  background-color: rgba($dark, 0.0);
+}
+
+@media only screen and (max-width: 729px) {
+  .carousel-caption {
+    @include mobileCaptions()
+  }
 }
