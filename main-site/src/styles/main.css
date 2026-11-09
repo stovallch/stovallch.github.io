@@ -1,3 +1,108 @@
+/*
 
+main.scss -> main.css 
+
+File containes the overall site styles.
+
+*/
+/* 
+
+------------ Site-Wide --------------
+
+*/
+:root {
+  color-scheme: light dark; }
+
+body {
+  background-color: light-dark(#f0e3c2, #1f1f1f);
+  font-family: sans-serif;
+  font-weight: 400;
+  font-size: larger;
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  align-items: stretch; }
+  bodyp {
+    color: light-dark(#011b02, #b6dfb3); }
+
+/* 
+
+------------ Main Page --------------
+
+*/
+#page {
+  background-color: light-dark(#f0e3c2, #1f1f1f);
+  display: grid;
+  max-width: none;
+  width: 100%;
+  max-height: none;
+  height: 100dvh;
+  overflow: hidden;
+  padding: 0;
+  position: relative;
+  grid-template-areas: "nb nb ct" "sc sc ct" "ft ft ct";
+  grid-template-rows: 10% 85% 5%; }
+  #page #nb {
+    grid-area: nb; }
+  #page #sc {
+    grid-area: sc; }
+  #page #ct {
+    grid-area: ct; }
+  #page #ft {
+    grid-area: ft; }
+
+/* 
+
+------------ All Components --------------
+
+*/
+.component {
+  display: flex;
+  padding: 20px;
+  flex-direction: column;
+  border-right: 1px solid light-dark(#0b330b, #6c9169); }
+  .component.navbar {
+    flex-direction: row; }
+  .component.is-end {
+    border-right: none; }
+  .component.navbar {
+    border-bottom: 1px solid light-dark(#0b330b, #6c9169); }
+  .component.is-bottom {
+    border-top: 1px solid light-dark(#0b330b, #6c9169);
+    padding: 0;
+    align-items: center;
+    justify-content: center; }
+    .component.is-bottom p {
+      font-size: xx-small;
+      color: light-dark(#011b023b, #b6dfb328); }
+
+/* 
+
+------------ Navbar--------------
+
+*/
+.navbar {
+  background-color: light-dark(#f0e3c2, #1f1f1f);
+  justify-content: center;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1000; }
+  .navbar a {
+    color: light-dark(#174417, #b8d8b7);
+    text-decoration: none; }
+    .navbar a:hover {
+      color: light-dark(#a5bea5, #3c4b3e); }
+  .navbar .menu-item {
+    padding-left: 2%;
+    padding-right: 2%; }
+  .navbar .logo {
+    align-items: end;
+    padding-top: 64px;
+    width: 128px; }
 
 /*# sourceMappingURL=main.css.map */

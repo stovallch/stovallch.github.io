@@ -1,0 +1,190 @@
+/*
+
+main.scss -> main.css 
+
+File containes the overall site styles.
+
+*/
+
+// Colors
+$body-color: #f0e3c2;
+$body-color-dark: #1f1f1f;
+
+$border-color: #0b330b;
+$border-color-dark: #6c9169;
+
+$menu-item-color: #174417;
+$menu-item-color-dark: #b8d8b7;
+
+$menu-item-hovor-color: #a5bea5;
+$menu-item-hovor-color-dark: #3c4b3e;
+
+$title-color: #0f3d0f;
+$title-color-dark: #b6dfb3;
+
+$text-color: #011b02;
+$text-color-dark: #b6dfb3;
+
+$faded-text-color: #011b023b;
+$faded-text-color-dark: #b6dfb328;
+
+
+/* 
+
+------------ Site-Wide --------------
+
+*/
+
+// Light-dark mode
+:root {
+	color-scheme: light dark;
+}
+
+body {
+	// Background
+	background-color: light-dark($body-color, $body-color-dark);
+
+	// Font
+	font-family: sans-serif;
+	font-weight: 400;
+	font-size: larger;
+	&p {
+		color: light-dark($text-color, $text-color-dark);
+	}
+
+	// Display
+	display: flex;
+	width: 100%;
+	min-height: 100vh;
+	margin: 0;
+	padding: 0;
+
+	// Layout/Alighnment
+	justify-content: center;
+	align-items: stretch;
+	//flex-direction: column;
+}
+
+
+/* 
+
+------------ Main Page --------------
+
+*/
+
+#page {
+	// Background
+	background-color: light-dark($body-color, $body-color-dark);
+
+	// Display
+	display: grid;
+	max-width: none;
+	width: 100%;
+	max-height: none;
+	height: 100dvh;
+	overflow: hidden;
+	padding: 0;
+
+	// Layout/Alignment
+	position: relative;
+	grid-template-areas:
+	"nb nb ct"
+	"sc sc ct"
+	"ft ft ct";
+	grid-template-rows: 10% 85% 5%;
+
+	#nb {
+		grid-area: nb;
+	}
+
+	#sc {
+		grid-area: sc;
+	}
+
+	#ct {
+		grid-area: ct;
+	}
+
+	#ft {
+		grid-area: ft;
+	}
+}
+
+
+/* 
+
+------------ All Components --------------
+
+*/
+
+.component {
+	// Display
+	display: flex;
+	padding: 20px;
+
+	// Layout/Alignment
+	flex-direction: column;
+	&.navbar {
+		flex-direction: row;
+	}
+
+	// Border
+	border-right: 1px solid light-dark($border-color, $border-color-dark);
+	&.is-end {
+		border-right: none;
+	}
+	&.navbar {
+		border-bottom: 1px solid light-dark($border-color, $border-color-dark);
+	}
+	&.is-bottom {
+		border-top: 1px solid light-dark($border-color, $border-color-dark);
+		padding: 0;
+		align-items: center;
+		justify-content: center;
+		p {
+			font-size: xx-small;
+			color: light-dark($faded-text-color, $faded-text-color-dark);
+		}
+	}
+}
+
+/* 
+
+------------ Navbar--------------
+
+*/
+
+// TODO: Sticky navbar
+
+.navbar {
+	// Color
+	background-color: light-dark($body-color, $body-color-dark);
+
+	justify-content: center;
+	align-items: center;
+	position: sticky;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+	
+
+	a {
+		color: light-dark($menu-item-color, $menu-item-color-dark);
+		text-decoration: none;
+
+		&:hover {
+			color: light-dark($menu-item-hovor-color, $menu-item-hovor-color-dark);
+		}
+	}
+
+	.menu-item {
+		padding-left: 2%;
+		padding-right: 2%;
+	}
+
+	.logo {
+		align-items: end;
+		padding-top: 64px;
+		width: 128px;
+	}
+}

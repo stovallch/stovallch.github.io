@@ -1,0 +1,13 @@
+---
+var { year } = Astro.props;
+
+year = new Date().getFullYear()
+---
+
+<div class="component is-bottom" id="ft">
+	<p>
+		&copy; &nbsp;
+		<span>{year}</span> &nbsp;
+		Stovall Clear and Haul LLC | All Rights Reserved
+	</p>
+</div>

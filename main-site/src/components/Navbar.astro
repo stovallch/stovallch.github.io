@@ -1,0 +1,90 @@
+---
+import { Image } from 'astro:assets';
+import Logo from '../assets/images/icons/StovallCH.svg'
+
+interface MenuItem {
+  label: string;
+  href: string;
+  class: string;
+}
+
+interface Props {
+  preItems?: MenuItem[];
+  postItems?: MenuItem[];
+}
+
+const {
+  preItems = [
+    { label: 'Who', class: 'menu-item', href: '#who' },
+    { label: 'What', class: 'menu-item ', href: '#what' },
+  ],
+  postItems = [
+    { label: 'How', class: 'menu-item ', href: '#how' },
+	{ label: 'Why', class: 'menu-item ', href: '#why' },
+  ],
+} = Astro.props;
+
+const pathname = Astro.url.pathname;
+---
+
+<div class="component navbar" id="nb" data-menu>
+	<!-- LEFT NAVBAR ITEMS -->
+	{
+		preItems.map((item) => {
+			return (
+				<a 
+				href={item.href} 
+				class:list={item.class}
+				>
+						{item.label}
+				</a>
+			);
+		})
+	}
+	<!-- CENTER NAVBAR LOGO -->
+	<a href="/" class="menu-item" >
+		<Image 
+			src={Logo}
+			alt="Stovall C&H Logo"
+			class="logo"
+		/>
+	</a>
+	<!-- RIGHT NAVBAR ITEMS -->
+	{
+		postItems.map((item) => {
+			return (
+				<a 
+				href={item.href} 
+				class:list={item.class}
+				>
+						{item.label}
+				</a>
+			);
+		})
+	}
+</div>
+
+<script>
+  const toggle = document.querySelector<HTMLButtonElement>('[data-menu-toggle]');
+  const menu = document.querySelector<HTMLElement>('[data-menu]');
+
+  const setOpen = (open: boolean) => {
+    if (!toggle || !menu) return;
+    toggle.setAttribute('aria-expanded', String(open));
+    toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    toggle.classList.toggle('is-open', open);
+    menu.classList.toggle('is-open', open);
+    document.body.classList.toggle('menu-open', open);
+  };
+
+  toggle?.addEventListener('click', () => {
+    const open = toggle.getAttribute('aria-expanded') !== 'true';
+    setOpen(open);
+  });
+
+  menu?.querySelectorAll('a').forEach((a) => a.addEventListener('click', () => setOpen(false)));
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') setOpen(false);
+  });
+</script>
