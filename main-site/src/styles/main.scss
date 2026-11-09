@@ -154,14 +154,17 @@ body {
 
 */
 
-// TODO: Sticky navbar
+// TODO: Sticky navbar, maybe additional style in .component?
 
 .navbar {
 	// Color
 	background-color: light-dark($body-color, $body-color-dark);
 
+	// Layout/Alignment
 	justify-content: center;
 	align-items: center;
+
+	// TODO: These are for trying to get a sticky navbar
 	position: sticky;
 	top: 0;
 	left: 0;
