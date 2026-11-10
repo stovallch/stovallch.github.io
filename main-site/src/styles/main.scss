@@ -26,10 +26,10 @@ $menu-item-hovor-color: #a5bea5;
 $menu-item-hovor-color-dark: #3c4b3e;
 
 $title-color: #0f3d0f;
-$title-color-dark: #b6dfb3;
+$title-color-dark: #97ca94;
 
 $text-color: #011b02;
-$text-color-dark: #b6dfb3;
+$text-color-dark: #f2fff1;
 
 $faded-text-color: #011b023b;
 $faded-text-color-dark: #b6dfb328;
@@ -68,7 +68,6 @@ body {
 	// Layout/Alighnment
 	justify-content: center;
 	align-items: stretch;
-	//flex-direction: column;
 }
 
 
@@ -200,6 +199,7 @@ body {
 
 .scroll-container {
 	overflow: auto;
+	scroll-behavior: smooth;
 }
 
 /* 
@@ -210,4 +210,38 @@ body {
 
 .scroller {
 	flex-shrink: 0;
+}
+
+.scroller-content {
+	// Display
+	display: flex;
+	
+	// Layout/Alignment
+	flex-direction: column;
+
+	& h2 {
+		// Display
+		display: flex;
+		padding-top: 20px;
+		color: light-dark($title-color, $title-color-dark);
+
+		// Layout/Alignment
+		justify-content: center;
+	}
+
+	& p {
+		// Display
+		color: light-dark($text-color, $text-color-dark);
+	}
+
+	& ul {
+		// Display
+		display: flex;
+		list-style-type: none;
+		padding: 0;
+
+		// Layout/Alignment
+		flex-direction: column;
+		align-items: center;
+	}
 }

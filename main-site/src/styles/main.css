@@ -31,7 +31,7 @@ body {
   justify-content: center;
   align-items: stretch; }
   bodyp {
-    color: light-dark(#011b02, #b6dfb3); }
+    color: light-dark(#011b02, #f2fff1); }
 
 /* 
 
@@ -115,7 +115,8 @@ body {
 
 */
 .scroll-container {
-  overflow: auto; }
+  overflow: auto;
+  scroll-behavior: smooth; }
 
 /* 
 
@@ -124,5 +125,22 @@ body {
 */
 .scroller {
   flex-shrink: 0; }
+
+.scroller-content {
+  display: flex;
+  flex-direction: column; }
+  .scroller-content h2 {
+    display: flex;
+    padding-top: 20px;
+    color: light-dark(#0f3d0f, #97ca94);
+    justify-content: center; }
+  .scroller-content p {
+    color: light-dark(#011b02, #f2fff1); }
+  .scroller-content ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    flex-direction: column;
+    align-items: center; }
 
 /*# sourceMappingURL=main.css.map */
