@@ -143,4 +143,26 @@ body {
     flex-direction: column;
     align-items: center; }
 
+/* 
+
+------------ Contact Panel --------------
+
+*/
+.contact-us {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  .contact-us a {
+    color: light-dark(#174417, #b8d8b7);
+    text-decoration: none; }
+    .contact-us a:hover {
+      color: light-dark(#a5bea5, #3c4b3e); }
+  .contact-us h2 {
+    display: flex;
+    padding-top: 20px;
+    color: light-dark(#0f3d0f, #97ca94);
+    justify-content: center;
+    text-align: center; }
+
 /*# sourceMappingURL=main.css.map */

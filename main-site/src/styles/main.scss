@@ -245,3 +245,41 @@ body {
 		align-items: center;
 	}
 }
+
+/* 
+
+------------ Contact Panel --------------
+
+*/
+
+.contact-us {
+	display: flex;
+
+	flex-direction: column;
+
+	justify-content: center;
+	align-items: center;
+
+	a {
+		color: light-dark($menu-item-color, $menu-item-color-dark);
+		text-decoration: none;
+
+		&:hover {
+			color: light-dark($menu-item-hovor-color, $menu-item-hovor-color-dark);
+		}
+	}
+
+	& h2 {
+		// Display
+		display: flex;
+		padding-top: 20px;
+		color: light-dark($title-color, $title-color-dark);
+
+		// Layout/Alignment
+		justify-content: center;
+
+		text-align: center;
+	}
+
+	// TODO: Center svgs
+}
