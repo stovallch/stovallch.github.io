@@ -2,3 +2,4 @@
 content/.DS_Store
 .DS_Store
 /main-site/src/styles/.sass-cache
+/node_modules
