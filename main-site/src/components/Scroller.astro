@@ -1,0 +1,24 @@
+---
+import * as log from "../pages/scrollers/who.md"
+const compiled = await log.compiledContent();
+const logs = Object.values(import.meta.glob("../pages/changelogs/*.md", {eager: true}));
+---
+
+<div class="scroller">
+	<div class="scroller-title">{log.frontmatter.title}</div>
+	<div class="scroller-content">
+		<Fragment set:html={compiled} />
+
+		<br>
+		<h2>All Logs:</h2>
+		<ol>
+		{
+			logs.map((log: any) => (
+			<li>
+				<a href={log.url}>{log.frontmatter.title}</a>
+			</li>
+			))
+		}
+		</ol>
+	</div>
+</div>

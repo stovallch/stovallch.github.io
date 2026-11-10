@@ -6,7 +6,13 @@ File containes the overall site styles.
 
 */
 
-// Colors
+
+/* 
+
+------------ Colors --------------
+
+*/
+
 $body-color: #f0e3c2;
 $body-color-dark: #1f1f1f;
 
@@ -154,22 +160,16 @@ body {
 
 */
 
-// TODO: Sticky navbar, maybe additional style in .component?
-
 .navbar {
-	// Color
+	// Background for sticky header
 	background-color: light-dark($body-color, $body-color-dark);
 
 	// Layout/Alignment
+	max-height: 50px;
+	min-height: 50px;
 	justify-content: center;
 	align-items: center;
-
-	// TODO: These are for trying to get a sticky navbar
 	position: sticky;
-	top: 0;
-	left: 0;
-	z-index: 1000;
-	
 
 	a {
 		color: light-dark($menu-item-color, $menu-item-color-dark);
@@ -186,8 +186,28 @@ body {
 	}
 
 	.logo {
-		align-items: end;
 		padding-top: 64px;
 		width: 128px;
+		height: 128px;
 	}
+}
+
+/* 
+
+------------ Scroll Container --------------
+
+*/
+
+.scroll-container {
+	overflow: auto;
+}
+
+/* 
+
+------------ Scroller - Scrollable Component --------------
+
+*/
+
+.scroller {
+	flex-shrink: 0;
 }

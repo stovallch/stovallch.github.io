@@ -7,6 +7,11 @@ File containes the overall site styles.
 */
 /* 
 
+------------ Colors --------------
+
+*/
+/* 
+
 ------------ Site-Wide --------------
 
 */
@@ -86,12 +91,11 @@ body {
 */
 .navbar {
   background-color: light-dark(#f0e3c2, #1f1f1f);
+  max-height: 50px;
+  min-height: 50px;
   justify-content: center;
   align-items: center;
-  position: sticky;
-  top: 0;
-  left: 0;
-  z-index: 1000; }
+  position: sticky; }
   .navbar a {
     color: light-dark(#174417, #b8d8b7);
     text-decoration: none; }
@@ -101,8 +105,24 @@ body {
     padding-left: 2%;
     padding-right: 2%; }
   .navbar .logo {
-    align-items: end;
     padding-top: 64px;
-    width: 128px; }
+    width: 128px;
+    height: 128px; }
+
+/* 
+
+------------ Scroll Container --------------
+
+*/
+.scroll-container {
+  overflow: auto; }
+
+/* 
+
+------------ Scroller - Scrollable Component --------------
+
+*/
+.scroller {
+  flex-shrink: 0; }
 
 /*# sourceMappingURL=main.css.map */
