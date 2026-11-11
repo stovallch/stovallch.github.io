@@ -19,7 +19,7 @@ File containes the overall site styles.
   color-scheme: light dark; }
 
 body {
-  background-color: light-dark(#f0e3c2, #1f1f1f);
+  background-color: light-dark(#f0e3c2, #181818);
   font-family: sans-serif;
   font-weight: 400;
   font-size: larger;
@@ -31,7 +31,7 @@ body {
   justify-content: center;
   align-items: stretch; }
   bodyp {
-    color: light-dark(#011b02, #f2fff1); }
+    color: light-dark(#011b02, #ddecdc); }
 
 /* 
 
@@ -39,7 +39,7 @@ body {
 
 */
 #page {
-  background-color: light-dark(#f0e3c2, #1f1f1f);
+  background-color: light-dark(#f0e3c2, #181818);
   display: grid;
   max-width: none;
   width: 100%;
@@ -68,15 +68,15 @@ body {
   display: flex;
   padding: 20px;
   flex-direction: column;
-  border-right: 1px solid light-dark(#0b330b, #6c9169); }
+  border-right: 1px solid light-dark(#0b330b, #4f684c); }
   .component.navbar {
     flex-direction: row; }
   .component.is-end {
     border-right: none; }
   .component.navbar {
-    border-bottom: 1px solid light-dark(#0b330b, #6c9169); }
+    border-bottom: 1px solid light-dark(#0b330b, #4f684c); }
   .component.is-bottom {
-    border-top: 1px solid light-dark(#0b330b, #6c9169);
+    border-top: 1px solid light-dark(#0b330b, #4f684c);
     padding: 0;
     align-items: center;
     justify-content: center; }
@@ -90,7 +90,7 @@ body {
 
 */
 .navbar {
-  background-color: light-dark(#f0e3c2, #1f1f1f);
+  background-color: light-dark(#f0e3c2, #181818);
   max-height: 50px;
   min-height: 50px;
   justify-content: center;
@@ -100,7 +100,7 @@ body {
     color: light-dark(#174417, #b8d8b7);
     text-decoration: none; }
     .navbar a:hover {
-      color: light-dark(#a5bea5, #3c4b3e); }
+      color: light-dark(#a5bea5, #274b2c); }
   .navbar .menu-item {
     padding-left: 2%;
     padding-right: 2%; }
@@ -132,16 +132,22 @@ body {
   .scroller-content h2 {
     display: flex;
     padding-top: 20px;
-    color: light-dark(#0f3d0f, #97ca94);
-    justify-content: center; }
+    color: light-dark(#0f3d0f, #3b7c37);
+    justify-content: center;
+    scroll-margin-top: 50px; }
   .scroller-content p {
-    color: light-dark(#011b02, #f2fff1); }
+    color: light-dark(#011b02, #ddecdc);
+    text-align: center; }
   .scroller-content ul {
     display: flex;
     list-style-type: none;
     padding: 0;
+    font-weight: 700;
+    color: light-dark(#076d0b, #c0ffbb);
     flex-direction: column;
     align-items: center; }
+    .scroller-content ul li {
+      padding: 5px; }
 
 /* 
 
@@ -154,14 +160,17 @@ body {
   justify-content: center;
   align-items: center; }
   .contact-us a {
+    display: flex;
     color: light-dark(#174417, #b8d8b7);
-    text-decoration: none; }
+    text-decoration: none;
+    flex-direction: column;
+    align-items: center; }
     .contact-us a:hover {
-      color: light-dark(#a5bea5, #3c4b3e); }
+      color: light-dark(#a5bea5, #274b2c); }
   .contact-us h2 {
     display: flex;
     padding-top: 20px;
-    color: light-dark(#0f3d0f, #97ca94);
+    color: light-dark(#0f3d0f, #3b7c37);
     justify-content: center;
     text-align: center; }
 

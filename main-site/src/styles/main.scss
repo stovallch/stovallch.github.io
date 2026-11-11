@@ -14,22 +14,25 @@ File containes the overall site styles.
 */
 
 $body-color: #f0e3c2;
-$body-color-dark: #1f1f1f;
+$body-color-dark: #181818;
 
 $border-color: #0b330b;
-$border-color-dark: #6c9169;
+$border-color-dark: #4f684c;
 
 $menu-item-color: #174417;
 $menu-item-color-dark: #b8d8b7;
 
 $menu-item-hovor-color: #a5bea5;
-$menu-item-hovor-color-dark: #3c4b3e;
+$menu-item-hovor-color-dark: #274b2c;
 
 $title-color: #0f3d0f;
-$title-color-dark: #97ca94;
+$title-color-dark: #3b7c37;
 
 $text-color: #011b02;
-$text-color-dark: #f2fff1;
+$text-color-dark: #ddecdc;
+
+$list-color: #076d0b;
+$list-color-dark: #c0ffbb;
 
 $faded-text-color: #011b023b;
 $faded-text-color-dark: #b6dfb328;
@@ -227,11 +230,13 @@ body {
 
 		// Layout/Alignment
 		justify-content: center;
+		scroll-margin-top: 50px;
 	}
 
 	& p {
 		// Display
 		color: light-dark($text-color, $text-color-dark);
+		text-align: center;
 	}
 
 	& ul {
@@ -239,10 +244,16 @@ body {
 		display: flex;
 		list-style-type: none;
 		padding: 0;
+		font-weight: 700;
+		color: light-dark($list-color, $list-color-dark);
 
 		// Layout/Alignment
 		flex-direction: column;
 		align-items: center;
+
+		& li {
+			padding: 5px;
+		}
 	}
 }
 
@@ -261,8 +272,14 @@ body {
 	align-items: center;
 
 	a {
+		// Display
+		display: flex;
 		color: light-dark($menu-item-color, $menu-item-color-dark);
 		text-decoration: none;
+
+		// Layout/Alignment
+		flex-direction: column;
+		align-items: center;
 
 		&:hover {
 			color: light-dark($menu-item-hovor-color, $menu-item-hovor-color-dark);
@@ -280,6 +297,4 @@ body {
 
 		text-align: center;
 	}
-
-	// TODO: Center svgs
 }
